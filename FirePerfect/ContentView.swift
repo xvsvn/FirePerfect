@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")

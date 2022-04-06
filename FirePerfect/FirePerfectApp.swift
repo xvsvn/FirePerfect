@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
-struct FirePerfectApp: App {
+struct lesson6_8App: App {
+    @StateObject var session = SessionStore()
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StarterScreen()
+                .environmentObject(session)
         }
     }
 }
