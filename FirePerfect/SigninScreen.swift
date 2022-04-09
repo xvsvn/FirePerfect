@@ -12,8 +12,8 @@ struct SigninScreen: View {
     @EnvironmentObject var session: SessionStore
       @State var isLoading = false
       @State var isModal = false
-      @State var email = ""
-      @State var password = ""
+      @State var email = "xasda@gmail.com"
+      @State var password = "qwer123"
       
       func doSignIn() {
           isLoading = true

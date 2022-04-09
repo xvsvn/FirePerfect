@@ -8,10 +8,9 @@
 import SwiftUI
 import Firebase
 
-
 struct HomeScreen: View {
     @EnvironmentObject var session: SessionStore
-   
+    @ObservedObject var database = RealtimeStore()
     @State var isLoading = false
     
     func doSignOut() {
@@ -20,27 +19,34 @@ struct HomeScreen: View {
         }
     }
     
-
+    func apiPosts() {
+        isLoading = true
+        database.loadPosts {
+            print(database.items.count)
+            isLoading = false
+        }
+    }
     var body: some View {
         NavigationView{
-            VStack{
-               
-                if let email = session.session?.email{
-                    Text("Welcome" + email)
-                }
+            ZStack{
+                List {
+                    ForEach(database.items, id: \.self) { item in
+                        PostCell(post: item)
+                    }
+                }.listStyle(PlainListStyle())
                 
+                if isLoading {
+                    ProgressView()
+                }
             }
             
-        }
- 
+                .navigationBarTitle("Posts", displayMode: .inline)
                 .navigationBarItems(trailing: HStack{
-                  
-                    Button(action: {
-                        
-                    },
-                     label: {
+                    NavigationLink {
+                        AddPostScreen()
+                    } label: {
                         Image("ic_cancel")
-                    })
+                    }
 
                     Button {
                        doSignOut()
@@ -48,13 +54,13 @@ struct HomeScreen: View {
                         Image("ic_logout")
                     }
 
-                })
-                .navigationBarTitle("Posts", displayMode: .inline)
+                }).foregroundColor(.black)
+                .onAppear {
+                    apiPosts()
+                }
         }
-    
-        
     }
-
+}
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {

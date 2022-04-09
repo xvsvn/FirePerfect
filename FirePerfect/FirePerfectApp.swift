@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Firebase
-
+import FirebaseDatabase
 @main
 struct lesson6_8App: App {
     @StateObject var session = SessionStore()

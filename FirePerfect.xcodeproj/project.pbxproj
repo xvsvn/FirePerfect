@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2235651A27FDBBC10095D3D1 /* Postcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235651927FDBBC10095D3D1 /* Postcell.swift */; };
+		2235651D28015F350095D3D1 /* StorageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235651C28015F350095D3D1 /* StorageStore.swift */; };
+		2235651F280165720095D3D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235651E280165720095D3D1 /* ImagePicker.swift */; };
+		2293D06727FDB70B001CACFD /* RealtimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293D06627FDB70B001CACFD /* RealtimeStore.swift */; };
+		2293D06927FDB742001CACFD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293D06827FDB742001CACFD /* Post.swift */; };
+		2293D06B27FDB785001CACFD /* AddPostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293D06A27FDB785001CACFD /* AddPostScreen.swift */; };
 		229C2ECE27FD628F00D71298 /* FirePerfectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C2ECD27FD628F00D71298 /* FirePerfectApp.swift */; };
 		229C2ED027FD628F00D71298 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229C2ECF27FD628F00D71298 /* ContentView.swift */; };
 		229C2ED227FD629400D71298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229C2ED127FD629400D71298 /* Assets.xcassets */; };
@@ -22,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2235651927FDBBC10095D3D1 /* Postcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postcell.swift; sourceTree = "<group>"; };
+		2235651B28015E870095D3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2235651C28015F350095D3D1 /* StorageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageStore.swift; sourceTree = "<group>"; };
+		2235651E280165720095D3D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2293D06627FDB70B001CACFD /* RealtimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeStore.swift; sourceTree = "<group>"; };
+		2293D06827FDB742001CACFD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2293D06A27FDB785001CACFD /* AddPostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostScreen.swift; sourceTree = "<group>"; };
 		229C2ECA27FD628F00D71298 /* FirePerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirePerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229C2ECD27FD628F00D71298 /* FirePerfectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirePerfectApp.swift; sourceTree = "<group>"; };
 		229C2ECF27FD628F00D71298 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +73,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2293D06527FDB480001CACFD /* SwiftFiles */ = {
+			isa = PBXGroup;
+			children = (
+				22E1E51F27FD88CA005372D8 /* User.swift */,
+				22E1E51D27FD8333005372D8 /* SessionStore.swift */,
+				2293D06827FDB742001CACFD /* Post.swift */,
+				2293D06627FDB70B001CACFD /* RealtimeStore.swift */,
+			);
+			path = SwiftFiles;
+			sourceTree = "<group>";
+		};
 		229C2EC127FD628F00D71298 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +105,15 @@
 		229C2ECC27FD628F00D71298 /* FirePerfect */ = {
 			isa = PBXGroup;
 			children = (
+				2235651B28015E870095D3D1 /* Info.plist */,
+				2293D06527FDB480001CACFD /* SwiftFiles */,
 				229C2ECD27FD628F00D71298 /* FirePerfectApp.swift */,
+				2235651927FDBBC10095D3D1 /* Postcell.swift */,
+				2293D06A27FDB785001CACFD /* AddPostScreen.swift */,
 				229C2ECF27FD628F00D71298 /* ContentView.swift */,
-				22E1E51D27FD8333005372D8 /* SessionStore.swift */,
-				22E1E51F27FD88CA005372D8 /* User.swift */,
 				22E1E51527FD821D005372D8 /* SignupScreen.swift */,
+				2235651C28015F350095D3D1 /* StorageStore.swift */,
+				2235651E280165720095D3D1 /* ImagePicker.swift */,
 				22E1E51927FD823E005372D8 /* StarterScreen.swift */,
 				22E1E51727FD822F005372D8 /* SigninScreen.swift */,
 				22E1E51B27FD824A005372D8 /* HomeScreen.swift */,
@@ -228,13 +256,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				229C2ED027FD628F00D71298 /* ContentView.swift in Sources */,
+				2293D06927FDB742001CACFD /* Post.swift in Sources */,
 				22E1E51E27FD8333005372D8 /* SessionStore.swift in Sources */,
+				2235651F280165720095D3D1 /* ImagePicker.swift in Sources */,
 				22E1E51827FD822F005372D8 /* SigninScreen.swift in Sources */,
+				2293D06B27FDB785001CACFD /* AddPostScreen.swift in Sources */,
+				2293D06727FDB70B001CACFD /* RealtimeStore.swift in Sources */,
 				22E1E51C27FD824A005372D8 /* HomeScreen.swift in Sources */,
+				2235651A27FDBBC10095D3D1 /* Postcell.swift in Sources */,
 				22E1E52027FD88CA005372D8 /* User.swift in Sources */,
 				22E1E51627FD821D005372D8 /* SignupScreen.swift in Sources */,
 				229C2ECE27FD628F00D71298 /* FirePerfectApp.swift in Sources */,
 				22E1E51A27FD823E005372D8 /* StarterScreen.swift in Sources */,
+				2235651D28015F350095D3D1 /* StorageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +400,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FirePerfect/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirePerfect/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +432,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FirePerfect/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirePerfect/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

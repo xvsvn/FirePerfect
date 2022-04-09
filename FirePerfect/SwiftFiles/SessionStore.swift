@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 import Firebase
+import FirebaseDatabase
+
 
 class SessionStore: ObservableObject {
     var didChange = PassthroughSubject<SessionStore, Never>()
